@@ -1,0 +1,48 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sofia", sans-serif;
+}
+body{
+    background:linear-gradient(to right,#3f5efb,#fc466f);
+}
+h1{
+    margin: 30px;
+    text-shadow: 5px 5px white;
+    font-size: 5rem;
+    color:#f6a83b
+
+}
+
+p{
+    font-size: 3rem;
+    color:#00d443af;
+    text-shadow: 1px 1px white;
+}
+
+.container{
+    width:70%;
+    margin:auto;
+    text-align: center;
+    
+}
+.dice{
+    text-align: center;
+    display:inline-block;
+   
+}
+img{
+    width:75% ;
+}
+
+
+button{
+    margin: 30px;
+    padding: 10px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+}

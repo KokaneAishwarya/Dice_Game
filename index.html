@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎲 LUDO 🎲</h1>
+
+        <div class="dice">
+            <p>Player 1</p>
+            <img src="images/dice 1.png" alt="" id="check1">
+        </div>
+
+        <div class="dice">
+            <p>Player 2</p>
+            <img src="images/dice 6.png" alt="" id="check2">
+        </div>
+
+
+        <div>
+            <button onclick="ludogame()" onmousedown="audio.play();">Click Me 🔘</button>
+        </div>
+    </div>
+    <script>
+
+        const audio = new Audio();
+        audio.src = "./rolling-dice.mp3";
+        ludogame = () => {
+            //generate random number 1 to 6
+            const play1 = Math.floor(Math.random() * 6) + 1;
+            const play1dice = 'images/dice' + play1 + '.png';
+            document.getElementById('check1').setAttribute('src', play1dice);
+
+
+            const play2 = Math.floor(Math.random() * 6) + 1;
+            const play2dice = 'images/dice' + play2 + '.png';
+            document.getElementById('check2').setAttribute('src', play2dice);
+
+
+
+            //logic foer winner
+            if (play1 > play2) {
+                document.querySelector('h1').innerHTML = ' Player1 won 🏆';
+
+            }
+            else if (play1 < play2) {
+                document.querySelector('h1').innerHTML = ' Player2 won 🏆';
+            }
+            else {
+                document.querySelector('h1').innerHTML = "It's a Draw 😃 !";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
